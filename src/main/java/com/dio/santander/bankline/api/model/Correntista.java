@@ -24,6 +24,10 @@ public class Correntista {
 	@Embedded
 	private Conta conta;
 	
+	
+	
+	
+	
 	public Conta getConta() {
 		return conta;
 	}
