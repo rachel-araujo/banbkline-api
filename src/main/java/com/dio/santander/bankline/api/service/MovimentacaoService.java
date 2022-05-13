@@ -19,20 +19,15 @@ public class MovimentacaoService {
 	
 	@Autowired
 	private CorrentistaRepository correntistaRepository;
-	
 	public void save(NovaMovimentacao novaMovimentacao) {
 		Movimentacao movimentacao = new Movimentacao();
 		
-		/*
-		 * Double valor = novaMovimentacao.getTipo() == MovimentacaoTipo.RECEITA ?
-		 * novaMovimentacao.getValor() : novaMovimentacao.getValor()* -1;
-		 ou ->*/ 
+		//Double valor = novaMovimentacao.getTipo()==MovimentacaoTipo.RECEITA ? novaMovimentacao.getValor() : novaMovimentacao.getValor() * -1;
 		
 		Double valor = novaMovimentacao.getValor();
 		if(novaMovimentacao.getTipo() == MovimentacaoTipo.DESPESA)
 			valor = valor * -1;
-
-		
+			
 		movimentacao.setDataHora(LocalDateTime.now());
 		movimentacao.setDescricao(novaMovimentacao.getDescricao());
 		movimentacao.setIdConta(novaMovimentacao.getIdConta());
@@ -46,6 +41,6 @@ public class MovimentacaoService {
 		}
 		
 		repository.save(movimentacao);
+		
 	}
-
 }

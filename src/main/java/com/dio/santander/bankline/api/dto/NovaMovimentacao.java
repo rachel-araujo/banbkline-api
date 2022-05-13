@@ -31,8 +31,6 @@ public class NovaMovimentacao {
 	public void setIdConta(Integer idConta) {
 		this.idConta = idConta;
 	}
-
-	
 	
 	
 }

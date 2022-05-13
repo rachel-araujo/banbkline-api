@@ -24,17 +24,12 @@ public class Correntista {
 	@Embedded
 	private Conta conta;
 	
-	
-	
-	
-	
 	public Conta getConta() {
 		return conta;
 	}
 	public void setConta(Conta conta) {
 		this.conta = conta;
 	}
-	
 	public Integer getId() {
 		return id;
 	}
@@ -55,5 +50,4 @@ public class Correntista {
 	}
 	
 	
-
 }
