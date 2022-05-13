@@ -26,12 +26,10 @@ public class CorrentistaController {
 	@GetMapping
 	public List<Correntista> findAll(){
 		return repository.findAll();
-		
 	}
+	
 	@PostMapping
-	public void save (@RequestBody NovoCorrentista correntista) {
+	public void save(@RequestBody NovoCorrentista correntista) {
 		service.save(correntista);
-		
 	}
-
 }
